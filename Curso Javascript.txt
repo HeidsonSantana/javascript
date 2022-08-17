@@ -1,0 +1,118 @@
+Lógica de programação 
+Usar os 5 Q´s para destrinchar os probemas
+1.quais são os dados de entrada?
+2. o que fazer com esses dados? (manipulação)
+3. quais as restrições deste problema? (o que eu não quero que aconteça, exceções)
+4. qual é o resultado esperado?
+5. qual é a sequência de passos para obter o resultado? (algoritmo)
+
+
+Anotações JS
+
+Diferentemente do HTML e CSS não precisamos usar o ; ao final das linhas de código
+Comentários //(uma linha) e /* mais de uma linha */
+
+Para entendermos o conceito de memória imagina que ela é um estacionamento. 
+No estacionamento temos vagas delimitadas (espaços) para carros, para caminhões e para motos
+O mesmo raciocínio pode ser aplicado para a memória que é um espaço virtual no qual guardamos dados
+Para declarar uma variável podemos usar o var vaga(espaço da vaga) = 5 ou let vaga = 5 (traduz-se var ou let RECEBE 5)
+Eu posso também fazer com que esse espaço fique vazio e "receba nada" com let vaga = null
+Para strings podemos usar para definir a atribuição da variável '' ou "" ou ``
+os nomes das variáveis chamamos de identificadores e como regra eles podem começar com letra, $ ou _ (n pode começar com números)
+ 
+O JS tem vários tipos primitivos de variáveis (typeof para saber qual é no node.js) como exemplo: number, string, boolean,
+null, undefined, object, function
+ 
+O comando prompt recebe sempre uma string, mesmo que seja um número, então faz-se necessário a conversão do valor 
+usando o Number.parseInt(n) ou Number.parseFloat(n) mas na nova versão podemos usar apenas Number(n) e o JS interpreta sozinho
+Assim como para transformar em string usa-se o string(n) ou n.toString() no final
+
+Se eu declarar 3 variáveis diferentes como nome = 'Fulano' idade = '31' e nota='5'
+e quiser imprimir isso na tela concatenado eu poderia escrever a linha de código abaixo
+   'O aluno ' + nome + 'de ' + idade + 'anos tirou a nota ' + nota
+
+Porém, existe um modo máis fácil de escrever essa linha com a técnica template strings
+ Usa-se o ${variável} delimitado por crase (`) da seguinte maneira 
+ `O aluno ${nome} de ${idade} anos tirou a nota ${nota}`
+
+Podemos usar dentro das strings do JS as tagas de html
+
+OPERADORES EM JS
+Aritiméticos: +, -, *(mult), /, % (resto da div inteira), **(potência) 
+    os operadores aritméticos seguem uma ordem de precedência (quem é calculado primeiro)
+    () -->  ** --> *, /, % (da esquerda pra direira caso estejam na msm expressão) --> +, -  (essa é a ordem seguida)
+
+Atribuição: var n = 3, depois eu escrevo n = n+4 (n vale 7 agora), posso substituir essa expressão por n += 4 ( ou n -=, n *=, n **=) todas elas significa n = n +, *, / ...
+pra somar somente 1 pode-se escrever n++ ou n--
+
+Relacionais: >, <, >=, <=, ==(igual), != , ===(idêntico)    5 == 5 (true) 5 == '5' (true)
+
+Logicos: ! (negação), && (conjunção = e), || (disjunção = ou)
+
+Ordem de precedência: aritméticos --> relacionais --> lógicos (! -> && -> ||)
+
+Ternário: ? e : 
+  teste ? true : false  
+var media = 5.5
+ex: média >= 7.0 ? "aprovado"(se for verdadeiro) : "reprovado" (se for falso)
+
+DOM = Document Object Model (modelo de documento de objetos que roda no JS do navegador)
+A arvóre DOM começar pela "raiz" que é o window --> location (URL), document (página), history (histórico)...
+Dentro do Document temos o HTML e dentro dele temos o head e o body e por ai vai...
+Porquê saber isso? na chamada do código podemos ir digitando window. e o VSCode completa as opções
+
+São 5 métodos de acesso aos elementos da árvore DOM (por Marca(tag), por ID, por Nome, por Classe e por Seletor)
+por marca: var p1 = document.getElementsByTagName('p')[0] --> vai selecionar o primeiro parágrafo
+por ID: var p1 = document.getElementsByID('id')
+por Nome: var p1 = document.getElementsByTagName('nome dado')
+por Classe: var p1 = document.getElementsByTagClassName('nome da classe')
+por Seletor: document.querySelector('div#msg')
+             document.querrySelectorAll()
+
+obs: o document.write(p1.innerText) pega só as palavras e o .innerHTML pega junto com as tag´s
+
+para interagir com os elementos nos temos os eventos dentro do JS. Para criar os eventos eu necessito das funções (bloco de linhas que só é executada qdo o evento ocorrer)
+
+As funções no JS são representadas por function ação(parâmetros){ bloco de códigos }
+
+obs: nos conseguimos identificar erros diretamente pelo defeat tools do navegador
+
+Além das TAG´s if (condição simples), if else (condição composta), if, else if, else (múltiplas condições) temos:
+switch (usado para casos onde temos condições fixas pré estabelicidas), exemplo: dias da semana 
+
+obs: para cada bloco de código de cada caso é necessário colocar um break no final
+var agora = new Date()   --> esta expressão vai pegar os dados da data e hora atual da onde estiver puxando (Front(navegador) e PC, back(banco), etc)
+var diaSem = agora.getDay()  /* domingo = 0, segunda = 1, terça =2 ... */
+switch (diaSem (é uma expressão)) {
+	case valor 0: 
+		console.log('Domingo')
+		break
+	case valor 1:
+		console.log('Segunda')
+		break
+	continua até o sábado...
+	default:                         ----> funciona como um else no (if else)
+		console.log('[ERRO] Dia inválido')
+	break (opcional)
+}
+
+
+Laços de repetição (while (do...while) e for)
+Exemplo de WHILE
+c=1
+while (c <= 5) {
+	console.log(c)
+	c++
+}
+
+Mesmo exemplo com FOR      //o FOR tem três parâmetros (inicialização ; teste ; incrementador)
+
+for (c=1 ; c <= 5 ; c++){
+	console.log(c)
+}
+
+-------------------------------------------
+Clicando em start debug no VSCode vc irá para área de depuração 
+Em debug console vc consegue colocar pontos de parada com o mouse do lado direito do código e acompanhar o processo do passo a passo do código apertando F10
+
+

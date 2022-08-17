@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header h1{
+    color: white;
+    text-align: center;
+}
+
+
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    padding: 15px;
+    width: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+}
+
+div{
+    text-align: center;
+    padding: 10px;
+}
+
+div img{
+    border-radius: 50px;
+}
+footer{
+    text-align: center;
+    font-style: italic;
+    padding: 5px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: red;
+}

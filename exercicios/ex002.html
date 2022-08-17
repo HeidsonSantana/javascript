@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Javascript</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Curso de Javascript</h1>
+        <p>Vamos aprender a programar em JS</p>
+    </header>
+    <main>
+        <script>
+            var nome = prompt('Qual o seu nome?')
+            document.writeln(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras`) //esse (.alguma coisa) é um atributo da variável ou função
+            document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()} letras`)   // o writeln é para separar os textos
+
+            //Para números 
+            var n1 = 1545.5
+            n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+        </script>
+    </main>
+    <footer>
+
+    </footer>
+</html>

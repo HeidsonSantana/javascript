@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-image: linear-gradient(to bottom, rgb(1, 165, 1), green);
+    padding: 20px 0px;
+    text-align: center;
+
+}
+
+header h1{
+
+}
+
+header p{
+
+}
+
+main{
+    font: normal 10px Arial, Helvetica, sans-serif ;
+}
+
