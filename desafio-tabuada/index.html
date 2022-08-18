@@ -10,26 +10,31 @@
 </head>
 <body>
     <header>
-        <h1>Vamos Contar</h1>
+        <h1>Tabuada</h1>
     </header>
     <main>
         <section>
             <div id="dados">
-                <p>Início:
-                    <input type="number" name="txt" id="txt1">
-                </p>
-                <p>Fim:
-                    <input type="number" name="txt" id="txt2">
-                </p>
-                <p>Passo:
-                    <input type="number" name="txt" id="txt3">
-                </p>
-                <p>
-                    <input type="button" value="Contar" onclick ="contar()">
+                <p>Número:
+                    <input type="number" name="num" id="txt1">
+                    <input type="button" value="Gerar tabuada" onclick ="tabuada()">
                 </p>
             </div>
-            <div id="res">
-                Preparando a contagem...
+            <div>
+                <select name="tabuada" id="seltab" size="10">
+                    <option value="nome">Digite um número</option>
+                    <!--  Opção de option no HTML diretamente
+                    <option value="number"></option>
+                    <option value="number"></option>
+                    <option value="number"></option>
+                    <option value="number"></option>
+                    <option value="number"></option>
+                    <option value="number"></option>
+                    <option value="number"></option>
+                    <option value="number"></option>
+                    <option value="number"></option>
+                    <option value="number"></option> -->
+                </select>
             </div>
         </section>
     </main>
