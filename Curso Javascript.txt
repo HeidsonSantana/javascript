@@ -116,3 +116,26 @@ Clicando em start debug no VSCode vc irá para área de depuração
 Em debug console vc consegue colocar pontos de parada com o mouse do lado direito do código e acompanhar o processo do passo a passo do código apertando F10
 
 
+-------------------------
+let tab = document.querySelector(select#tabela)
+
+Toda vez que criamos elementos, atributos, etc no arquivo .js 
+var item = document.createElement('elemento a ser criado')
+item.text = `blablabla`
+
+tab.appendChild(item)   ---precisamos add o item criado a variável que guarda o elemento HTML com o append  
+
+-----------------------
+Os array também podem ser chamados de vetores são variáveis compostas que guardam mais de um elemento através do par chave(índice)-valor(conteúdo)
+
+let num = [3, 8, 1] 
+num[3] = 6 -- irá acrescentar ao array o 6 no índice(chave) 3
+num.push(7) -- vai acrescentar o número 7 na última posição
+num.length -- comprimento do array
+num.sort() -- irá colocar os elementos em ordem crescente
+num.indexOf(7) -- vai procurar se tem o valor 7 no array e me retornar a chave 
+
+
+
+
+
